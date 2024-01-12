@@ -1,25 +1,16 @@
 import React from "react";
-import Table from "./table";
-function Tab(){
 
-    return(<div>
-        <table>
-            <tr>
-                <thead>First Name</thead>
-                <thead>Last Name</thead>
-                <thead>Age</thead>
-                <thead>city</thead>
-            </tr>
-            <tr>
-            <td>{fn}</td>
-            <td>{ln}</td>
-            <td>{age}</td>
-            <td>{city}</td>
-            </tr>
-        </table>
-    </div>
+function Tab({people}){
+    console.log(people,"p")
+
+    return (<tr>
+        <td>{people.firstname}</td>
+        <td>{people.lastname}</td>
+        <td>{people.age}</td>
+        <td>{people.city}</td>
+        </tr>
    
-
+      
     )
 }
 export default Tab
