@@ -23,7 +23,7 @@ const Navigate = useNavigate()
     validationSchema: Yup.object({
       firstname: Yup.string().required('kindly please enter Your firstname').min(3, 'minimum char should be 3').max(8, 'max 8 char'),
       lastname: Yup.string().required('please enter Your lastname').min(3, 'minimum char should be 3').max(8, 'max 8 char'),
-      age: Yup.string().required('please enter Your age ').min(3, 'minimum char should be 3').max(8, 'max 8 char'),
+      age: Yup.string().required('please enter Your age ').min(1, 'minimum char should be 1').max(8, 'max 8 char'),
     }),
 
     onSubmit: (values) => {
@@ -39,8 +39,6 @@ const Navigate = useNavigate()
 
   return (<>
 
-
-   
     <form onSubmit={formik.handleSubmit} className='text-center bg-dark w-25 p-3 rounded'>
     <h1>This is my form</h1>
 
@@ -50,7 +48,7 @@ const Navigate = useNavigate()
       <div style={{ color: 'red' }}>{formik.touched.lastname && formik.errors.lastname}</div>
       <input className='form-control mb-3' placeholder='Age' type='text' name='age' onChange={formik.handleChange} onBlur={formik.handleBlur}></input>
       <div style={{ color: 'red' }}>{formik.touched.age && formik.errors.age}</div>
-      <button className='btn btn-info ' type='submit'>maari</button>
+      <button className='btn btn-info ' type='submit'>Submit</button>
     </form>
     <div className='d-flex flex-wrap'>
         {
@@ -65,6 +63,7 @@ const Navigate = useNavigate()
           })
         }
     </div>
+  
   </>
   )
 }

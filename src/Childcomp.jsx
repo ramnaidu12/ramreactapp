@@ -13,9 +13,10 @@ function Childcomp(){
     },[])
 
     return(
-        std && <div>
+        std && <div className="border text-center  m-5 w-50 bg-light">
                     <h1>Name: {std.firstname +' '+ std.lastname }</h1>
                     <h1>Age: {std.age}</h1>
+                    <button className="btn btn-secondary">click here</button>
               </div>
     )
 }
