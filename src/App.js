@@ -4,16 +4,20 @@ import Counter from './counter';
 import { Provider } from 'react-redux';
 import Store from './store/store';
 import Counter2 from './counter2';
-import Counter3 from './counter3';
+
 function App() {
   return (
-    <div className="border border-2 m-3 p-3 border-danger">
-      <h1>App</h1>
+    <div className='container d-flex  '>
+    
       <Provider store={Store}>
+        <div className='m-5  border secondary p-5 '>
       <Counter></Counter>
+      </div>
+      <div className='m-5 border secondary p-5'>
       <Counter2></Counter2>
-      <Counter3></Counter3>
-      </Provider>
+      </div>
+
+     </Provider>
     </div>
   );
 }
